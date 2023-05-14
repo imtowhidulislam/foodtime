@@ -13,13 +13,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 body{
     font-family: Poppins;    
 }
 .container{
     width: min(90%, 1440px);
+    margin: 0 auto;
 }
 li, a {
     list-style: none;
@@ -35,13 +36,15 @@ li, a {
 }
 
 /* Nav bar Style Start */
-.navBar{
+.navBg{
+    background-color: var(--shadowClrLight);
+}
+.navBar1{
     display: flex;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
-    background-color: var(--shadowClrLight);
-    width: 100%;
+    /* width: 100%; */
     padding-block: 1rem;
 }
 .nav{
@@ -53,7 +56,6 @@ li, a {
 .nav > ul {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 .logo{
     color: var(--primaryClr);
@@ -100,14 +102,82 @@ li, a {
 /* Nav bar Style End */
 
 /* Heading Style Start */
+.header{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 2rem;
+    place-items: center;
+    padding-block: 10rem;
+}
 .col-1{
-    border: 2px solid blue;
+    grid-row: 1;
+    grid-column: 1 / 7;
+    width: 100%;
 }
 .col-1 h2 {
 font-size: 65px;
 font-weight: 700;
-line-height: 84px;
+line-height: 70px;
 letter-spacing: 0em;
 text-align: left;
+color: var(--primaryClr)
+}
+.col-1 p{
+    color: var(--shadowClrDark);
+    text-transform: capitalize;
+    padding-block: 1rem;
+}
+.col-1 > div{
+    border: 2px solid var(--shadowClrLight);
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 2rem;
+    box-sizing: border-box;
+    margin-top: 1rem;
+}
+.col-1 > div > div{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #FF8B00;
+    padding: 0.5rem;
+    margin: .5rem;
+}
+.col-1 > div > input {
+    border: transparent;
+    width: 80%;
+    margin-left: 1rem;
+
+}
+.col-2{
+    display: flex;
+    justify-content: flex-end;
+    grid-row: 1;
+    grid-column: 7 / 13;
+    width: 100%;
+
+}
+.col-2 > div {
+    max-width: 500px;
+}
+.col-2 > div > img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+.searchBtn{
+    padding-block: 1rem;
+
+    border: 2px solid var(--primaryClr);
+    padding-inline: 2rem;
+    display: flex;
+    gap: .5rem;
+    border-radius: 2rem;
+    z-index: 10;
+}
+.searchBtn:hover{
+    border: 2px solid var(--primaryClrHover);
 }
 /* Heading Style End */
