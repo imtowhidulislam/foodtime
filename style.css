@@ -1,8 +1,113 @@
+:root{
+    --primaryClr : #6B9142;
+    --primaryClrHover : #89ba55;
+    --secondaryClr :#FF8B00;
+    --primaryTextClr : #ffffff;
+    --secondaryTextClr :#000000;
+    --shadowClrDark : #676767;
+    --shadowClrLight : #e3e3e3;
+    --dropShadow : "0px 12.2182px 27.0545px rgba(0, 0, 0, 0.15)"
+}
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+body{
+    font-family: Poppins;    
+}
+.container{
+    width: min(90%, 1440px);
+}
+li, a {
+    list-style: none;
+    text-decoration: none;
+    color: #000000;
+}
 .title{
     font-size: 2rem;
     color: #ee3355;
     text-align: center;
     font-weight: bold;
-    border-bottom: 2px solid #000;
-    
+    font-family: Poppins ;    
 }
+
+/* Nav bar Style Start */
+.navBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: var(--shadowClrLight);
+    width: 100%;
+    padding-block: 1rem;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
+.nav > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+    color: var(--primaryClr);
+    font-family: Poppins;
+    font-size: 28px;
+    font-weight: 400;
+    /* line-height: 45px; */
+    letter-spacing: 0em;
+    text-align: left;
+}
+.list + .list{
+    margin-left: 2rem;
+}
+.link{
+
+}
+.button{
+    background-color: var(--primaryClr);
+    color: var(--primaryTextClr);
+    cursor: pointer;
+    text-transform: capitalize;
+    border: transparent;
+    transition: backgroundColor 300ms ease-in-out, color 300ms ease-in-out;
+}
+.button-1{
+    padding-block: .5rem;
+    padding-inline: 1.5rem;
+    border-radius: 2rem;
+}
+.button-2{
+    font-size:1.5rem;
+    width: 60px;
+    height: 60px;
+    padding-block: .25rem;
+    padding-inline: .5rem;
+    border-radius: 50%;
+}
+.fa-cart-plus {
+}
+.button:hover{
+    background-color: var(--primaryClrHover);
+    color: var(--secondaryTextClr);
+}
+/* Nav bar Style End */
+
+/* Heading Style Start */
+.col-1{
+    border: 2px solid blue;
+}
+.col-1 h2 {
+font-size: 65px;
+font-weight: 700;
+line-height: 84px;
+letter-spacing: 0em;
+text-align: left;
+}
+/* Heading Style End */
